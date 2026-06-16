@@ -1,0 +1,879 @@
+2026-06-16 12:21:12,044 (INFO) - django.utils.autoreload autoreload Watching for file changes with StatReloader
+2026-06-16 12:21:12,447 (WARNING) - silk.profiling.profiler profiler Cannot execute silk_profile as silk is not installed correctly.
+2026-06-16 12:21:22,471 (WARNING) - django.request log Not Found: /favicon.ico
+2026-06-16 12:21:29,205 (ERROR) - django.request log Internal Server Error: /playground/hello/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\cache.py", line 48, in _decorator
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\cache.py", line 124, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\client\default.py", line 362, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 10061 connecting to 127.0.0.1:6379. No connection could be made because the target machine actively refused it.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\utils\decorators.py", line 185, in _view_wrapper
+    result = _pre_process_request(request, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\utils\decorators.py", line 131, in _pre_process_request
+    result = middleware.process_request(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\middleware\cache.py", line 183, in process_request
+    cache_key = get_cache_key(request, self.key_prefix, "GET", cache=self.cache)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\utils\cache.py", line 392, in get_cache_key
+    headerlist = cache.get(cache_key)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\debug_toolbar\panels\cache.py", line 42, in wrapper
+    return panel._record_call(cache, alias, name, original_method, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\debug_toolbar\panels\cache.py", line 154, in _record_call
+    value = original_method(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\cache.py", line 117, in get
+    value = self._get(key, default, version, client)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\cache.py", line 55, in _decorator
+    raise e.__cause__  # type: ignore[misc] # noqa: B904
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\client\default.py", line 360, in get
+    value = client.get(key)
+            ^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\commands\core.py", line 3194, in get
+    return self.execute_command("GET", name, keys=[name])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\client.py", line 787, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\client.py", line 793, in _execute_command
+    conn = self.connection or pool.get_connection()
+                              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\utils.py", line 258, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\connection.py", line 3139, in get_connection
+    connection.connect()
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\connection.py", line 1006, in connect
+    self.retry.call_with_retry(
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\retry.py", line 132, in call_with_retry
+    raise error
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\retry.py", line 120, in call_with_retry
+    return do()
+           ^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\connection.py", line 1007, in <lambda>
+    lambda: self.connect_check_health(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\connection.py", line 1055, in connect_check_health
+    raise e
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. No connection could be made because the target machine actively refused it.
+2026-06-16 12:21:33,059 (ERROR) - django.request log Internal Server Error: /playground/hello/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\cache.py", line 48, in _decorator
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\cache.py", line 124, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\client\default.py", line 362, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 10061 connecting to 127.0.0.1:6379. No connection could be made because the target machine actively refused it.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\utils\decorators.py", line 185, in _view_wrapper
+    result = _pre_process_request(request, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\utils\decorators.py", line 131, in _pre_process_request
+    result = middleware.process_request(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\middleware\cache.py", line 183, in process_request
+    cache_key = get_cache_key(request, self.key_prefix, "GET", cache=self.cache)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\utils\cache.py", line 392, in get_cache_key
+    headerlist = cache.get(cache_key)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\debug_toolbar\panels\cache.py", line 42, in wrapper
+    return panel._record_call(cache, alias, name, original_method, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\debug_toolbar\panels\cache.py", line 154, in _record_call
+    value = original_method(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\cache.py", line 117, in get
+    value = self._get(key, default, version, client)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\cache.py", line 55, in _decorator
+    raise e.__cause__  # type: ignore[misc] # noqa: B904
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\client\default.py", line 360, in get
+    value = client.get(key)
+            ^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\commands\core.py", line 3194, in get
+    return self.execute_command("GET", name, keys=[name])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\client.py", line 787, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\client.py", line 793, in _execute_command
+    conn = self.connection or pool.get_connection()
+                              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\utils.py", line 258, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\connection.py", line 3139, in get_connection
+    connection.connect()
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\connection.py", line 1006, in connect
+    self.retry.call_with_retry(
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\retry.py", line 132, in call_with_retry
+    raise error
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\retry.py", line 120, in call_with_retry
+    return do()
+           ^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\connection.py", line 1007, in <lambda>
+    lambda: self.connect_check_health(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\connection.py", line 1055, in connect_check_health
+    raise e
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. No connection could be made because the target machine actively refused it.
+2026-06-16 12:23:12,073 (ERROR) - django.request log Internal Server Error: /playground/hello/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\cache.py", line 48, in _decorator
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\cache.py", line 124, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\client\default.py", line 362, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 10061 connecting to 127.0.0.1:6379. No connection could be made because the target machine actively refused it.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\utils\decorators.py", line 185, in _view_wrapper
+    result = _pre_process_request(request, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\utils\decorators.py", line 131, in _pre_process_request
+    result = middleware.process_request(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\middleware\cache.py", line 183, in process_request
+    cache_key = get_cache_key(request, self.key_prefix, "GET", cache=self.cache)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\utils\cache.py", line 392, in get_cache_key
+    headerlist = cache.get(cache_key)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\debug_toolbar\panels\cache.py", line 42, in wrapper
+    return panel._record_call(cache, alias, name, original_method, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\debug_toolbar\panels\cache.py", line 154, in _record_call
+    value = original_method(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\cache.py", line 117, in get
+    value = self._get(key, default, version, client)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\cache.py", line 55, in _decorator
+    raise e.__cause__  # type: ignore[misc] # noqa: B904
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\client\default.py", line 360, in get
+    value = client.get(key)
+            ^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\commands\core.py", line 3194, in get
+    return self.execute_command("GET", name, keys=[name])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\client.py", line 787, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\client.py", line 793, in _execute_command
+    conn = self.connection or pool.get_connection()
+                              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\utils.py", line 258, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\connection.py", line 3139, in get_connection
+    connection.connect()
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\connection.py", line 1006, in connect
+    self.retry.call_with_retry(
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\retry.py", line 132, in call_with_retry
+    raise error
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\retry.py", line 120, in call_with_retry
+    return do()
+           ^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\connection.py", line 1007, in <lambda>
+    lambda: self.connect_check_health(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\connection.py", line 1055, in connect_check_health
+    raise e
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. No connection could be made because the target machine actively refused it.
+2026-06-16 12:23:16,170 (ERROR) - django.request log Internal Server Error: /playground/hello/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\cache.py", line 48, in _decorator
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\cache.py", line 124, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\client\default.py", line 362, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 10061 connecting to 127.0.0.1:6379. No connection could be made because the target machine actively refused it.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\utils\decorators.py", line 185, in _view_wrapper
+    result = _pre_process_request(request, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\utils\decorators.py", line 131, in _pre_process_request
+    result = middleware.process_request(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\middleware\cache.py", line 183, in process_request
+    cache_key = get_cache_key(request, self.key_prefix, "GET", cache=self.cache)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\utils\cache.py", line 392, in get_cache_key
+    headerlist = cache.get(cache_key)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\debug_toolbar\panels\cache.py", line 42, in wrapper
+    return panel._record_call(cache, alias, name, original_method, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\debug_toolbar\panels\cache.py", line 154, in _record_call
+    value = original_method(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\cache.py", line 117, in get
+    value = self._get(key, default, version, client)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\cache.py", line 55, in _decorator
+    raise e.__cause__  # type: ignore[misc] # noqa: B904
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django_redis\client\default.py", line 360, in get
+    value = client.get(key)
+            ^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\commands\core.py", line 3194, in get
+    return self.execute_command("GET", name, keys=[name])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\client.py", line 787, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\client.py", line 793, in _execute_command
+    conn = self.connection or pool.get_connection()
+                              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\utils.py", line 258, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\connection.py", line 3139, in get_connection
+    connection.connect()
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\connection.py", line 1006, in connect
+    self.retry.call_with_retry(
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\retry.py", line 132, in call_with_retry
+    raise error
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\retry.py", line 120, in call_with_retry
+    return do()
+           ^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\connection.py", line 1007, in <lambda>
+    lambda: self.connect_check_health(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\redis\connection.py", line 1055, in connect_check_health
+    raise e
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. No connection could be made because the target machine actively refused it.
+2026-06-16 12:25:32,768 (INFO) - django.utils.autoreload autoreload C:\Users\user\Documents\storefront3\playground\views.py changed, reloading.
+2026-06-16 12:25:33,780 (INFO) - django.utils.autoreload autoreload Watching for file changes with StatReloader
+2026-06-16 12:25:34,026 (WARNING) - silk.profiling.profiler profiler Cannot execute silk_profile as silk is not installed correctly.
+2026-06-16 12:25:51,756 (INFO) - playground.views views calling  httpbin
+2026-06-16 12:25:53,573 (INFO) - playground.views views Received the response
+2026-06-16 12:25:53,610 (ERROR) - django.request log Internal Server Error: /playground/hello/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1116, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\storefront3\playground\views.py", line 22, in get
+    data = response.json()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1120, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-06-16 12:25:58,298 (INFO) - playground.views views calling  httpbin
+2026-06-16 12:25:59,348 (INFO) - playground.views views Received the response
+2026-06-16 12:25:59,378 (ERROR) - django.request log Internal Server Error: /playground/hello/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1116, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\storefront3\playground\views.py", line 22, in get
+    data = response.json()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1120, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-06-16 12:26:01,346 (INFO) - playground.views views calling  httpbin
+2026-06-16 12:26:02,337 (INFO) - playground.views views Received the response
+2026-06-16 12:26:02,364 (ERROR) - django.request log Internal Server Error: /playground/hello/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1116, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\storefront3\playground\views.py", line 22, in get
+    data = response.json()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1120, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-06-16 12:26:24,751 (INFO) - playground.views views calling  httpbin
+2026-06-16 12:26:25,730 (INFO) - playground.views views Received the response
+2026-06-16 12:26:25,775 (ERROR) - django.request log Internal Server Error: /playground/hello/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1116, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\storefront3\playground\views.py", line 22, in get
+    data = response.json()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1120, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-06-16 12:26:27,862 (INFO) - playground.views views calling  httpbin
+2026-06-16 12:26:28,849 (INFO) - playground.views views Received the response
+2026-06-16 12:26:28,923 (ERROR) - django.request log Internal Server Error: /playground/hello/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1116, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\storefront3\playground\views.py", line 22, in get
+    data = response.json()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1120, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-06-16 12:26:30,876 (INFO) - playground.views views calling  httpbin
+2026-06-16 12:26:31,880 (INFO) - playground.views views Received the response
+2026-06-16 12:26:31,908 (ERROR) - django.request log Internal Server Error: /playground/hello/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1116, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\storefront3\playground\views.py", line 22, in get
+    data = response.json()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1120, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-06-16 12:26:33,771 (INFO) - playground.views views calling  httpbin
+2026-06-16 12:26:34,639 (INFO) - playground.views views calling  httpbin
+2026-06-16 12:26:34,755 (INFO) - playground.views views Received the response
+2026-06-16 12:26:34,810 (ERROR) - django.request log Internal Server Error: /playground/hello/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1116, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\storefront3\playground\views.py", line 22, in get
+    data = response.json()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1120, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-06-16 12:26:35,611 (INFO) - playground.views views Received the response
+2026-06-16 12:26:35,650 (ERROR) - django.request log Internal Server Error: /playground/hello/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1116, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\storefront3\playground\views.py", line 22, in get
+    data = response.json()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1120, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-06-16 12:26:35,975 (INFO) - playground.views views calling  httpbin
+2026-06-16 12:26:36,979 (INFO) - playground.views views Received the response
+2026-06-16 12:26:37,007 (ERROR) - django.request log Internal Server Error: /playground/hello/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1116, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\storefront3\playground\views.py", line 22, in get
+    data = response.json()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1120, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-06-16 12:26:38,928 (INFO) - playground.views views calling  httpbin
+2026-06-16 12:26:43,858 (INFO) - playground.views views Received the response
+2026-06-16 12:48:30,281 (INFO) - django.utils.autoreload autoreload C:\Users\user\Documents\storefront3\manage.py changed, reloading.
+2026-06-16 12:58:15,794 (INFO) - django.utils.autoreload autoreload Watching for file changes with StatReloader
+2026-06-16 12:58:16,022 (WARNING) - silk.profiling.profiler profiler Cannot execute silk_profile as silk is not installed correctly.
+2026-06-16 12:58:25,472 (INFO) - playground.views views calling  httpbin
+2026-06-16 12:58:26,604 (INFO) - playground.views views Received the response
+2026-06-16 12:58:26,641 (ERROR) - django.request log Internal Server Error: /playground/hello/
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1116, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\storefront3\playground\views.py", line 22, in get
+    data = response.json()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\user\.virtualenvs\storefront3-7qPewr4d\Lib\site-packages\requests\models.py", line 1120, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-06-16 12:59:16,686 (WARNING) - django.request log Unauthorized: /store/collections/
+2026-06-16 12:59:16,698 (WARNING) - django.request log Forbidden: /store/collections/
+2026-06-16 12:59:16,705 (WARNING) - django.request log Bad Request: /store/collections/
+2026-06-16 13:37:59,859 (WARNING) - django.request log Unauthorized: /store/collections/
+2026-06-16 13:37:59,863 (WARNING) - django.request log Forbidden: /store/collections/
+2026-06-16 13:37:59,874 (WARNING) - django.request log Bad Request: /store/collections/
+2026-06-16 13:40:18,100 (INFO) - django.utils.autoreload autoreload C:\Users\user\Documents\storefront3\storefront\settings\common.py changed, reloading.
+2026-06-16 13:40:19,298 (INFO) - django.utils.autoreload autoreload Watching for file changes with StatReloader
+2026-06-16 13:40:19,561 (WARNING) - silk.profiling.profiler profiler Cannot execute silk_profile as silk is not installed correctly.
+2026-06-16 13:40:37,592 (WARNING) - django.request log Unauthorized: /store/collections/
+2026-06-16 13:40:37,621 (WARNING) - django.request log Forbidden: /store/collections/
+2026-06-16 13:40:37,691 (WARNING) - django.request log Bad Request: /store/collections/
