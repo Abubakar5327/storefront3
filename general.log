@@ -877,3 +877,7 @@ requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 2026-06-16 13:40:37,592 (WARNING) - django.request log Unauthorized: /store/collections/
 2026-06-16 13:40:37,621 (WARNING) - django.request log Forbidden: /store/collections/
 2026-06-16 13:40:37,691 (WARNING) - django.request log Bad Request: /store/collections/
+2026-06-17 12:50:24,034 (INFO) - django.utils.autoreload autoreload Watching for file changes with StatReloader
+2026-06-17 12:50:24,865 (WARNING) - silk.profiling.profiler profiler Cannot execute silk_profile as silk is not installed correctly.
+2026-06-17 12:50:29,639 (WARNING) - django.request log Not Found: /favicon.ico
+2026-06-17 12:50:40,272 (WARNING) - django.request log Not Found: /favicon.ico
