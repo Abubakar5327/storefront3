@@ -12,9 +12,10 @@ ALLOWED_HOSTS = []
 DATABASES = {
     'default': dj_database_url.config(
         env='DATABASE_URL',
-        conn_max_age=600
+        default='mysql://root:password@localhost:3306/db'
     )
 }
+
 
 REDIS_URL = os.environ['REDIS_URL']
 
