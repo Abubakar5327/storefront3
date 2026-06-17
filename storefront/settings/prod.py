@@ -12,7 +12,7 @@ ALLOWED_HOSTS = []
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='mysql://root:password@localhost:3306/db',
+        default='mysql://root:password@localhost:3306/storefront3',
         conn_max_age=600
     )
 }
