@@ -10,12 +10,15 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 ALLOWED_HOSTS = []
 
 
+
+
 DATABASES = {
     'default': dj_database_url.config(
-        default='mysql://root:password@localhost:3306/storefront3',
+        env='DATABASE_URL',
         conn_max_age=600
     )
 }
+
 
 REDIS_URL = os.environ['REDIS_URL']
 
@@ -34,8 +37,16 @@ CACHES = {
 }
 
 
-EMAIL_HOST = os.environ['MAILGUN_SMTP_SERVER']
-EMAIL_HOST_USER = os.environ['MAILGUN_SMTP_LOGIN']
-EMAIL_HOST_PASSWORD = os.environ['MAILGUN_SMTP_PASSWORD']
-EMAIL_PORT = os.environ['MAILGUN_SMTP_PORT']
+# EMAIL_HOST = os.environ['MAILGUN_SMTP_SERVER']
+# EMAIL_HOST_USER = os.environ['MAILGUN_SMTP_LOGIN']
+# EMAIL_HOST_PASSWORD = os.environ['MAILGUN_SMTP_PASSWORD']
+# EMAIL_PORT = os.environ['MAILGUN_SMTP_PORT']
 
+
+
+# Using .get() prevents KeyError crashes if a variable is missing
+EMAIL_HOST = os.environ.get('MAILGUN_SMTP_SERVER', 'smtp.mailgun.org')
+EMAIL_HOST_USER = os.environ.get('MAILGUN_SMTP_LOGIN', '')
+EMAIL_HOST_PASSWORD = os.environ.get('MAILGUN_SMTP_PASSWORD', '')
+EMAIL_PORT = int(os.environ.get('MAILGUN_SMTP_PORT', 2525))
+EMAIL_USE_TLS = True
