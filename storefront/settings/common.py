@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework',
     'djoser',
-    'silk',
     'playground',
     'debug_toolbar',
     'store',
@@ -65,8 +64,7 @@ MIDDLEWARE = [
    
 ]
 
-# if DEBUG:
-#     MIDDLEWARE += ['silk.middleware.SilkyMiddleware']
+
 
 INTERNAL_IPS = [
     # ...
@@ -174,7 +172,7 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=50)
 }
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 EMAIL_HOST = 'localhost'
 EMAIL_HOST_USER = ''
 EMAILHOST_PASSWORD = ''
@@ -185,7 +183,7 @@ ADMINS = [
     ('Mosh', 'admin@moshbuy.com')
 ]
 
-CELERY_BROKER_URL = 'redis://localhost:6379/1'
+
 CELERY_BEAT_SCHEDULE = {
     'notify_customers': {
         'task': 'playground.tasks.notify_customers',
@@ -195,16 +193,7 @@ CELERY_BEAT_SCHEDULE = {
         }
 }
 
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/2",
-        'TIMEOUT': 10 * 60, # 10 minutes
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        }
-    }
-}
+
 
 LOGGING = {
     'version': 1,
