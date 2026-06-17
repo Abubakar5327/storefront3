@@ -9,13 +9,13 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 ALLOWED_HOSTS = []
 
+
 DATABASES = {
     'default': dj_database_url.config(
-        env='DATABASE_URL',
-        default='mysql://root:password@localhost:3306/db'
+        default='mysql://root:password@localhost:3306/db',
+        conn_max_age=600
     )
 }
-
 
 REDIS_URL = os.environ['REDIS_URL']
 
