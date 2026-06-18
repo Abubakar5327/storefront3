@@ -8,6 +8,13 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 ALLOWED_HOSTS = [os.environ.get('RAILWAY_PUBLIC_DOMAIN', '')]
 
+import sys
+
+DATABASE_URL = os.environ.get('DATABASE_URL')
+if not DATABASE_URL:
+    print("ERROR: DATABASE_URL environment variable is not set.", file=sys.stderr)
+    sys.exit(1)
+
 DATABASES = {
     'default': dj_database_url.config(
         env='DATABASE_URL',
