@@ -4,9 +4,12 @@ from storefront.settings.common import *
 
 DEBUG = False
 
+INSTALLED_APPS = [app for app in INSTALLED_APPS if app != 'debug_toolbar']
+MIDDLEWARE = [m for m in MIDDLEWARE if 'debug_toolbar' not in m]
+
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-ALLOWED_HOSTS = [os.environ.get('RAILWAY_PUBLIC_DOMAIN', '')]
+ALLOWED_HOSTS = ['khaamat-bites-production.up.railway.app']
 
 import sys
 
