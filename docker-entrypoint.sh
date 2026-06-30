@@ -1,7 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 
-echo "Running migrations..."
-python manage.py migrate --noinput
+# Apply database migrations
+echo "Apply database migrations"
+python manage.py migrate
 
-echo "Starting server..."
-gunicorn storefront.wsgi --log-file -
+# Start server
+echo "Starting server"
+python manage.py runserver 0.0.0.0:8000

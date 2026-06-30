@@ -881,3 +881,12 @@ requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 2026-06-17 12:50:24,865 (WARNING) - silk.profiling.profiler profiler Cannot execute silk_profile as silk is not installed correctly.
 2026-06-17 12:50:29,639 (WARNING) - django.request log Not Found: /favicon.ico
 2026-06-17 12:50:40,272 (WARNING) - django.request log Not Found: /favicon.ico
+2026-06-18 13:41:08,731 (INFO) - django.utils.autoreload autoreload Watching for file changes with StatReloader
+2026-06-18 15:21:11,253 (INFO) - django.utils.autoreload autoreload C:\Users\user\Documents\storefront3\storefront\settings\dev.py changed, reloading.
+2026-06-18 15:21:12,441 (INFO) - django.utils.autoreload autoreload Watching for file changes with StatReloader
+2026-06-18 15:21:20,349 (INFO) - django.utils.autoreload autoreload C:\Users\user\Documents\storefront3\storefront\settings\dev.py changed, reloading.
+2026-06-18 15:21:21,404 (INFO) - django.utils.autoreload autoreload Watching for file changes with StatReloader
+2026-06-18 15:21:33,717 (INFO) - django.utils.autoreload autoreload C:\Users\user\Documents\storefront3\storefront\settings\dev.py changed, reloading.
+2026-06-18 15:21:34,826 (INFO) - django.utils.autoreload autoreload Watching for file changes with StatReloader
+2026-06-18 15:21:37,829 (INFO) - django.utils.autoreload autoreload C:\Users\user\Documents\storefront3\storefront\settings\dev.py changed, reloading.
+2026-06-24 17:03:20,907 (INFO) - django.utils.autoreload autoreload Watching for file changes with StatReloader
