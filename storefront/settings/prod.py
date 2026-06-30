@@ -11,7 +11,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 ALLOWED_HOSTS = ['khaamat-bites-production.up.railway.app']
 
+
 CSRF_VERIFICATION = ['khaamat-bites-production.up.railway.app']
+
 
 import sys
 
