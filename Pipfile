@@ -32,6 +32,7 @@ pytest-watch = "*"
 model-bakery = "*"
 locust = "*"
 django-silk = "*"
+pywin32 = {version = "*", sys_platform = "== 'win32'"}
 
 [requires]
 python_version = "3.11"
