@@ -890,3 +890,15 @@ requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 2026-06-18 15:21:34,826 (INFO) - django.utils.autoreload autoreload Watching for file changes with StatReloader
 2026-06-18 15:21:37,829 (INFO) - django.utils.autoreload autoreload C:\Users\user\Documents\storefront3\storefront\settings\dev.py changed, reloading.
 2026-06-24 17:03:20,907 (INFO) - django.utils.autoreload autoreload Watching for file changes with StatReloader
+2026-07-10 15:42:33,971 (INFO) - django.utils.autoreload autoreload Watching for file changes with StatReloader
+2026-07-10 15:43:26,345 (INFO) - django.utils.autoreload autoreload C:\Users\user\Documents\storefront3\storefront\settings\dev.py changed, reloading.
+2026-07-10 15:43:27,373 (INFO) - django.utils.autoreload autoreload Watching for file changes with StatReloader
+2026-07-10 15:43:29,869 (INFO) - django.utils.autoreload autoreload C:\Users\user\Documents\storefront3\storefront\settings\dev.py changed, reloading.
+2026-07-10 15:43:30,829 (INFO) - django.utils.autoreload autoreload Watching for file changes with StatReloader
+2026-07-10 15:43:36,669 (INFO) - django.utils.autoreload autoreload C:\Users\user\Documents\storefront3\storefront\settings\dev.py changed, reloading.
+2026-07-10 15:43:37,615 (INFO) - django.utils.autoreload autoreload Watching for file changes with StatReloader
+2026-07-10 15:44:09,384 (WARNING) - django.request log Not Found: /favicon.ico
+2026-07-10 15:44:15,888 (WARNING) - silk.model_factory model_factory Response to request with pk e0b25789-4a73-4ff4-ad50-3e30da635726 has content type text/javascript but was unable to parse it
+2026-07-10 15:44:17,364 (WARNING) - silk.model_factory model_factory Response to request with pk bf55abb9-f9fb-4574-942e-88c460e4e8e1 has content type text/javascript but was unable to parse it
+2026-07-10 15:44:23,446 (WARNING) - django.request log Not Found: /admin/store//
+2026-07-10 15:44:34,958 (WARNING) - django.request log Unauthorized: /store/orders/
